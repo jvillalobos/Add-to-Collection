@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Add to Collection",
+  "version": "0.1",
+
+  "description": "Returns the collection and favorite buttons to AMO.",
+  "homepage_url": "https://github.com/jvillalobos/Add-to-Collection",
+
+  "applications": {
+    "gecko": {
+      "id": "add-to-collection@xulforge.com",
+      "strict_min_version": "45.0"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://addons.mozilla.org/*",
+        "https://addons.allizom.org/*",
+        "https://addons-dev.allizom.org/*"],
+      "js": [ "scripts/add-to-collection.js" ]
+    }
+  ]
+}
